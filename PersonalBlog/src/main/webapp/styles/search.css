@@ -1,0 +1,100 @@
+#search{
+	background-color:#c0c0c0;
+}
+div{
+	/*border:1px solid blue;*/
+	position:absolute;
+	padding:0px auto;
+}
+.for_main{
+	top:103px;
+	left:15px;
+	width:400px;
+	height:500px;
+}
+.search_main{
+	top:70px;
+	left:0px;
+	width:360px;
+	height:300px;
+	font-size:15px;
+	text-align:center;
+	padding:0px 20px;
+	
+}
+.search_btn{
+	top:50px;
+	left:90px;
+	width:300px;
+	height:25px;
+}
+#search_text{
+	left:-20px;
+	width:200px;
+	height:20px;
+}
+
+.spa{
+	top:0;
+	left:400px;
+}
+.page{
+	top:520px;
+	left:650px;
+	font-size:15px;
+	
+}
+.page a:link,.page a:visited,.page1 a:link,.page1 a:visited{
+	color:#8ca0fa;
+	text-decoration:none;
+}
+.page1{
+	top:520px;
+	left:530px;
+	font-size:15px;
+	
+}
+#text_body{
+	/*
+		去掉边框
+		去掉右下角
+		去掉点击时边框
+	*/
+	border:0px;
+	resize : none; 
+	outline:none;
+}
+#sllip{
+	width:500px;
+    height:51px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp:2;
+	overflow: hidden;
+		
+}
+#all_Body{
+	list-style-type:none;
+}
+#all_Body a:link,#all_Body a:visited{
+	color:#8ca0fa;
+	text-decoration:none;
+	
+}
+#all_Body a:hover{
+	color:#004080;
+}
+input.page_btn{
+		outline:none;
+		border:0px;
+		cursor:pointer
+	}
+input.submit{
+	background:#006699;
+	width:70px;
+	height:25px;
+	color:white;
+	font-weight:bold;
+}

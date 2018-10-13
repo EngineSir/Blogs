@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>修改管理员信息</title>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<style>
+	html,body{
+		background-color:#8ca0fa;
+	}
+	div{
+	/*border:1px solid blue;*/
+	position:absolute;
+	overflow:hide;
+	}
+	.body_main{
+		border:2px solid blue;
+		top:50px; 
+		left:170px;
+		width:860px;
+		height:600px;
+		background:url(../image/update_back.png);
+	}
+	table 
+  {   
+  	position:absolute;
+  	top:50px;
+  	left:150px;
+  	border-collapse:separate;  
+  	 border-spacing:40px;
+   } 
+th{
+	text-align:right;
+	font-size:20px;
+}
+input{
+	width:200px;
+	height:20px;
+}
+.btn{
+	top:300px;
+	left:320px;
+}
+#up_btn{
+	background-color:#8ca0fa;
+	height:30px;
+	width:100px;
+}
+.back{
+	top:300px;
+	left:430px;
+}
+.main{
+	color:red;
+	font-weihgt:bold;
+}
+</style>
+<script type="text/javascript">
+	function btn_f(){
+		var nick=$('#nick').val();
+		var flog=true;
+		if(nick==""){
+			flog=false;
+			
+		}
+		var pwd=$('#pwd').val();
+		var sure_pwd=$('#suer_pwd').val();
+		if(pwd!=sure_pwd || pwd=="" || sure_pwd==""){
+			flog=false;
+		}
+		return flog;
+	}
+	function show(){
+		var nick=$('#nick').val();
+		if(nick==""){
+			$('#wri').html("null");
+			$('#wri').show();	
+		}else{
+			$('#wri').hide();	
+		}
+		
+	}
+	function show1(){
+		var pwd=$('#pwd').val();
+		if(pwd==""){
+			$('#wri1').html("null");
+			$('#wri1').show();	
+		}else{
+			$('#wri1').hide();	
+		}	
+	}
+	function show2(){
+		var suer_pwd=$('#suer_pwd').val();
+		var pwd=$('#pwd').val();
+		if(suer_pwd!=pwd || suer_pwd==""){
+			$('#wri2').html("error");
+			$('#wri2').show();	
+		}else{
+			$('#wri2').hide();	
+		}	
+	}
+</script>
+</head>
+<body>
+	<div class="body_main">
+		<form action="/PersonalBlog/updateAdmin.do" method="post">
+		<table border="0" cellspacing="0" cellpadding="0">
+			<tr>
+				<th valign="top">*昵称</th>
+				<td><input type="text" id="nick" onblur="show()" name="nick">
+				</td>
+				<td id="wri" class="main"></td>
+			</tr>
+			<tr>
+				<th valign="top" >*密码</th>
+				<td><input type="password" id="pwd" onblur="show1()" name="pwd"></td>
+				<td id="wri1" class="main"></td>
+			</tr>
+			<tr>
+				<th valign="top" >*确认密码</th>
+				<td><input type="password" id="suer_pwd" onblur="show2()" name="sure_pwd"></td>
+				<td id="wri2" class="main"></td>
+			</tr>
+		</table>
+		<div class="btn">
+			<input type="submit" onclick="return btn_f()" id="up_btn" value="确定">
+		</div>
+		</form>
+		<div class="back">
+			<input type="button" onclick="javascript:window.location.href='adminCode.html'" id="up_btn" value="返回">
+		</div>
+	</div>
+</body>
+</html>

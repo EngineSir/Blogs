@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>管理员登录</title>
+<style>
+	html,body{
+		background-color:#8ca0fa;
+	}
+	div{
+	/*border:1px solid blue;*/
+	position:absolute;
+}
+	.main_body{
+		top:100px;
+		left:300px;
+		width:500px;
+		height:300px;
+		border:1px solid #004080;
+	}
+	.adm_body{
+	
+		width:400px;
+		height:150px;
+	}
+	.account{
+	left:150px;
+		width:100px;
+		height:30px;
+	}
+	.pwd{
+	top:80px;
+	left:150px;
+		width:150px;
+		height:30px;
+	}
+	.text_body{
+		width:200px;
+		height:30px;
+	}
+	.btn{
+		top:200px;
+		left:150px;
+		width:200px;
+		height:30px;
+	}
+	#btn_Log{
+		width:202px;
+		height:31px;
+		background-color:#004080;
+	}
+	input{
+	outline:none;
+	border:1px solid #8ca0fa;
+	}
+</style>
+<script type="text/javascript" src="../js/jquery.min.js"></script>
+<script type="text/javascript" src="../js/pathvalue.js"></script>
+</head>
+<body>
+    <form action="/PersonalBlog/login.do" method="post">
+	<div class="main_body">
+		<span>管理员登录</span><hr>
+		<div class="adm_body">
+			<div class="account">
+				<input type="text" placeholder="管理员帐号" class="text_body" id="admin_name" name="admin">
+				<a id="accout_msg"></a>
+			</div>
+			<div class="pwd">
+				<input type="password" placeholder="管理员密码" class="text_body" id="admin_pwd" name="pass">
+				<span id="accout_pwd"></span>	
+			</div>		
+		</div>
+		<div class="btn">
+			<input type="submit" value="登录" id="btn_Log" onclick="doSubmit()">
+		</div>
+	</div>
+	</form>
+</body>
+</html>

@@ -1,0 +1,61 @@
+html,body{
+		margin:0;
+		overflow-y:auto;
+		background:url(../image/regback.png) no-repeat;
+	}
+	div{
+	border:1px solid white;
+	margin:0 0;
+}
+.d1{
+	position:absolute;
+	left:350px;
+	top:50px;
+	width:500px;
+	height:500px;
+}
+#set{
+	color:#004080;
+	
+}
+
+table 
+  {   
+  	position:absolute;
+  	top:50px;
+  	left:70px;
+  	border-collapse:separate;  
+  	 border-spacing:20px;
+   } 
+th{
+	text-align:right;
+}
+#thea{
+	position:absolute;
+  	top:10px;
+  	left:195px;
+	color:#004080;
+	text-align:center;
+	font-weight:bold;
+	font-size:30px;
+}
+input,select{
+	height:20px;
+}
+
+#findbut{
+	width:100px;
+  	height:30px;
+  	background:url(../image/reg.png) no-repeat;
+}
+.find{
+	position:absolute;
+  	top:455px;
+  	left:200px;
+  	width:100px;
+  	height:30px;
+  	
+}
+input{
+		outline:none;
+	}

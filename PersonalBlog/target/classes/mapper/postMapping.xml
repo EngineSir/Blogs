@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+  "http://ibatis.apache.org/dtd/ibatis.apache-3-mapper.dtd"> 
+  <mapper namespace="com.engine.blog.dao.postDao">
+  	<insert id="addPost" parameterType="com.engine.blog.entity.Post">
+  		insert into post (id,title,body,time,rep_num,read_num)
+  		 values(#{id},#{title},#{body},#{time},#{rep_num},#{read_num})
+  	</insert>
+  	<select id="disPost" parameterType="Map" resultType="com.engine.blog.entity.Post">
+  		select * from post order by time desc limit #{begin},10
+  	</select>
+  	<select id="disBody" parameterType="string" resultType="com.engine.blog.entity.Post">
+  		select * from post where id=#{id}
+  	</select>
+  	<select id="newTopic" resultType="com.engine.blog.entity.Post">
+  		select * from post order by time desc limit 0,6
+  	</select>
+  	<delete id="deletePost" parameterType="string">
+  		delete from post where id=#{id}
+  	</delete>
+  	
+  	<update id="addReplyNum" parameterType="string">
+  		update post set rep_num=rep_num+1 where id=#{id}
+  	</update>
+  	<update id="deleteReplyNum" parameterType="string">
+  		update post set rep_num=rep_num-1 where id=#{id}
+  	</update>
+  	<update id="addReadNum" parameterType="string">
+  		update post set read_num=read_num+1 where id=#{id}
+  	</update>
+  </mapper>

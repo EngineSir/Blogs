@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+  "http://ibatis.apache.org/dtd/ibatis.apache-3-mapper.dtd"> 
+  <mapper namespace="com.engine.blog.dao.blogDao">
+  	<insert id="addBlog" parameterType="com.engine.blog.entity.Blog">
+  		insert into blog (id,attr,type,body,title,time)
+  		 values(#{id},#{attr},#{type},#{body},#{title},#{time})
+  	</insert>
+  	<select id="clickHref" parameterType="string" resultType="com.engine.blog.entity.Blog">
+  		select * from blog where id=#{id}
+  	</select>
+  	<delete id="deleteBlog" parameterType="string">
+  		delete from blog where id=#{id}
+  	</delete>
+  	<update id="updateBlog" parameterType="com.engine.blog.entity.Blog">
+  		update blog set title=#{title},body=#{body} where id=#{id}
+  	</update>
+  	<select id="disBlog" resultType="com.engine.blog.entity.Blog">
+  		select * from blog order by time desc limit 0,6
+  	</select>
+  </mapper>

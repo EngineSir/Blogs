@@ -1,0 +1,177 @@
+#blog{
+	background-color:#c0c0c0;
+}
+div{
+	/*border:1px solid blue;*/
+	position:absolute;
+	padding:20px auto;
+}
+#all{
+	list-style-type:none;
+	font-size:20px;
+	text-align:center;
+}
+.col{
+	
+	position:absolute;
+	top:102px;
+	left:15px;
+	width:160px;
+	height:500px;
+	background-color:white;
+	border:2px solid blue;
+}
+#web{
+	position:absolute;
+	left:17px;
+}
+#java{
+	position:absolute;
+	left:15px;
+	top:60px;
+}
+#spring{
+	position:absolute;
+	left:13px;
+	top:110px;
+}
+#mvc{
+	position:absolute;
+	left:13px;
+	top:160px;
+}
+#batis{
+	position:absolute;
+	left:13px;
+	top:210px;
+}
+#linux{
+	position:absolute;
+	left:13px;
+	top:260px;
+}
+#db{
+	position:absolute;
+	left:13px;
+	top:310px;
+}
+#ds{
+	position:absolute;
+	left:13px;
+	top:360px;
+}
+#web1{
+	color:#804040;
+	cursor:pointer;
+}
+
+
+.col #all span:hover{
+	color:#800080;
+}
+.checked{
+	/*background-color:#0080c0;*/
+	color:red;
+}
+.blog_main{
+	top:103px;
+	left:177px;
+	width:500px;
+	height:500px;
+}
+
+li span{
+	width:400px;
+	height:100px;
+}
+#blog_body{
+	list-style-type:none;
+	
+}
+#blog_body a:link,#blog_body a:visited{
+	color:#8ca0fa;
+	text-decoration:none;
+}
+#blog_body a:hover{
+	color:#004080;
+}
+#btn{
+	width:25px;
+	height:25px;
+	background:url(../image/del.png) no-repeat;
+}
+input{
+		outline:none;
+		border:0px;
+		cursor:pointer
+	}
+	.page{
+	top:500px;
+	left:280px;
+	font-size:15px;
+	
+}
+.page a:link,.page a:visited,.page1 a:link,.page1 a:visited{
+	color:#8ca0fa;
+	text-decoration:none;
+}
+.page1{
+	top:500px;
+	left:200px;
+	font-size:15px;
+	
+}
+.write_blog{
+	top:200px;
+	left:750px;
+	width:230px;
+	height:170px;
+	
+}
+#wri{
+	 display:block;
+}
+.write_blog a:link,.write_blog a:visited{
+	color:#8ca0fa;
+	text-decoration:none;
+}
+.write_blog a:hover{
+	color:#8000ff;
+}
+
+
+.update_adm{
+	top:10px;
+	left:1000px;
+	width:120px;
+	height:35px;
+	text-align:center;
+}
+.update_adm a:link,.update_adm a:visited{
+	color:#8ca0fa;
+	text-decoration:none;	
+}
+.update_adm a:hover{
+		color:#8000ff;
+}
+#sllips{
+	width:500px;
+    height:55px;
+	overflow:hidden;
+	text-overflow:ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp:2;
+	overflow: hidden;
+}
+#blog_body{
+	font-size:15px;
+}
+.signout{
+	
+	width:42px;
+	height:22px;
+	font-size:15px;
+	font-weight:bold;
+	background-color:#white;
+}

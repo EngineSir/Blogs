@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//ibatis.apache.org//DTD Mapper 3.0//EN"  
+  "http://ibatis.apache.org/dtd/ibatis.apache-3-mapper.dtd"> 
+  <mapper namespace="com.engine.blog.dao.replyDao">
+  	<insert id="addReply" parameterType="com.engine.blog.entity.Reply">
+  		insert into reply (id,post_id,time,rep_body)
+  		 values(#{id},#{post_id},#{time},#{rep_body})
+  	</insert>
+  	<select id="disReply" parameterType="string" resultType="com.engine.blog.entity.Reply">
+  		select * from reply where post_id=#{postId} order by time
+  	</select>
+  	<delete id="deleteReply" parameterType="string">
+  		delete from reply where id=#{id}
+  	</delete>
+  	<delete id="deleteAllReply" parameterType="string">
+  		delete from reply where post_id=#{postId}
+  	</delete>
+  </mapper>
