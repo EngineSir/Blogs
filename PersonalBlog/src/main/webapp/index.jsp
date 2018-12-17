@@ -14,6 +14,8 @@
 		disBlog();
 		disPost();
 	});
+	
+	//新版本
 </script>
 </head>
 <body>
