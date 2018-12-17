@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>发表新话题</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <link rel="stylesheet" href="styles/editor.css">
+   <link href="js/ue/themes/default/css/umeditor.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript" src="js/ue/third-party/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/ue/umeditor.config.js"></script>
+    <script type="text/javascript" charset="utf-8" src="js/ue/umeditor.min.js"></script>
+    <script type="text/javascript" src="js/ue/lang/zh-cn/zh-cn.js"></script>
+    <script type="text/javascript" src="js/post.js"></script>
+    <script type="text/javascript" src="js/pathvalue.js"></script>
+</head>
+<body>
+<div class="edio">
+	<div class="title" >
+		<input type="text" placeholder="输入文章标题" id="title_opt">
+	</div>
+	
+</div>
+<div>
+    <script id="editor" type="text/plain" style="width:900px;height:400px;"></script>
+</div>
+<div class="ue">
+<script type="text/javascript">
+    //实例化编辑器
+    var ue = UM.getEditor('editor',{autoHeightEnabled:false});
+    $(function(){
+    	$("#btn_bo").click(postEdtor);
+    });
+</script>
+</div>
+<div class="diser">
+	<span id="pro"></span>
+</div>
+<div class="pub">
+	<input type="button" value="发表帖子" id="btn_bo" title="发表帖子"
+	onmousemove="this.style.backgroundColor='#808080'"
+	onmouseout="this.style.backgroundColor='white'">
+</div>
+<div class="top">
+<div class="back">
+	<a href="forum.jsp" title="返回" id="gback">返回</a>
+</div>
+</div>
+</body>
+</html>
