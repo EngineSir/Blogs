@@ -11,7 +11,9 @@ import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-
+/*
+ * 过滤器
+ */
 public class loginFilter implements Filter
 {
 
